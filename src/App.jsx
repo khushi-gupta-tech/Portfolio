@@ -1,7 +1,13 @@
+import About from "./components/About";
+import MainPage from "./components/MainPage";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-5xl text-green-500">hello world</h1>
+    <div className="bg-black text-white font-[inter] ">
+      <Navbar/>
+      <MainPage/>
+      <About/>
     </div>
   );
 }
