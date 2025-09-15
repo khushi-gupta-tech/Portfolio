@@ -21,7 +21,7 @@ const Navbar = () => {
             </li>
              <li>
               <Link
-                to=""
+                to="skill"
                 smooth={true}
                 duration={500}
                 className="hover:text-red-600 cursor-pointer"
