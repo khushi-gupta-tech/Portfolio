@@ -1,5 +1,5 @@
 import React from "react";
-import skills from "./utils/mockData";
+import skills from "../utils/mockData";
 
 const Skills = () => {
   return (
