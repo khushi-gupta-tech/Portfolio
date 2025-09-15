@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="flex  gap-x-30">
         <div>
           <ul className="flex gap-x-10 font-bold ">
-            <li  className="hover:text-red-600 cursor-pointer">Home</li>
+            <li className="hover:text-red-600 cursor-pointer">Home</li>
             <li>
               <Link
                 to="about"
@@ -19,7 +19,7 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-             <li>
+            <li>
               <Link
                 to="skill"
                 smooth={true}
@@ -29,7 +29,7 @@ const Navbar = () => {
                 Skills
               </Link>
             </li>
-             <li>
+            <li>
               <Link
                 to="project"
                 smooth={true}
@@ -39,12 +39,18 @@ const Navbar = () => {
                 Projects
               </Link>
             </li>
-            
           </ul>
         </div>
         <div>
           <button className="bg-red-600 p-1 rounded-lg hover:bg-red-300 cursor-pointer">
-            Contact Me
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="hover:text-red-600 cursor-pointer"
+            >
+              Contact Me
+            </Link>
           </button>
         </div>
       </div>

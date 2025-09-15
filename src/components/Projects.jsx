@@ -36,7 +36,7 @@ const Projects = () => {
         </div>
       ))}
       <div className="mt-12">
-        <button className="bg-red-500 p-2 rounded-lg hover:bg-red-400 cursor-pointer hover:scale-105 ">
+        <button className="bg-red-500 p-2 rounded-lg hover:bg-red-400 cursor-pointer hover:scale-110 ">
           <a href="https://github.com/khushi-gupta-tech?tab=repositories" target="_blank">View More</a>
         </button>
       </div>
