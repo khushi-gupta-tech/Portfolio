@@ -9,13 +9,19 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-      timestamp: new Date()
-    };
-    
+
+    const name = e.target.name.value.trim();
+    const email = e.target.email.value.trim();
+    const message = e.target.message.value.trim();
+
+    // Validation checks
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields!");
+      return;
+    }
+
+    const data = { name, email, message, timestamp: new Date() };
+
     try {
       await addDoc(collection(db, "messages"), data);
       toast.success("Message sent successfully!");
