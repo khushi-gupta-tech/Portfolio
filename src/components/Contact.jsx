@@ -32,16 +32,17 @@ const Contact = () => {
     }
   };
 
-  return (
-    <div id="contact" className="mt-40 flex flex-col items-center px-6">
-      <h1 className="font-bold text-6xl">Get in Touch</h1>
+   return (
+    <div id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">Get in Touch</h1>
 
-      <div className="flex flex-col md:flex-row justify-evenly gap-x-20 mt-12 w-full max-w-6xl">
-        {/* Contact Info */}
-        <div className="flex flex-col gap-4 mt-10">
-          <h1 className="text-5xl font-semibold">Let's talk</h1>
-          <p>Feel free to connect with me.</p>
-          <div className="flex flex-col gap-3 text-lg">
+        <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-20 mt-12 text-left">
+          {/* Contact Info */}
+          <div className="flex flex-col gap-4 mt-10">
+            <h2 className="text-4xl lg:text-5xl font-semibold">Let's talk</h2>
+            <p className="text-gray-400">Feel free to connect with me.</p>
+            <div className="flex flex-col gap-3 text-lg">
             <p className="flex items-center gap-2">
               <MdEmail size={24} />
               <a href="mailto:kg834208@gmail.com" target="_blank" rel="noreferrer" className="underline hover:text-red-400">
@@ -64,27 +65,19 @@ const Contact = () => {
               <MdLocationOn size={24} /> Greater Noida, India
             </p>
           </div>
-        </div>
+          </div>
 
-        {/* Contact Form */}
-        <div className="w-[40%] mt-5">
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-2">
-              <label className="mb-1 font-medium">Name</label>
-              <input name="name" className="border p-2 rounded" placeholder="Enter your name" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="mb-1 font-medium">Email</label>
-              <input name="email" className="border p-2 rounded" placeholder="Enter your email" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="mb-1 font-medium">Message</label>
-              <textarea name="message" className="border p-2 rounded h-32" placeholder="Enter your message" />
-            </div>
-            <button type="submit" className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-2">
-              Send Message
-            </button>
-          </form>
+          {/* Contact Form */}
+          <div className="w-full md:w-[40%] mt-5">
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+               <input name="name" className="border border-neutral-700 bg-neutral-900 p-3 rounded" placeholder="Enter your name" />
+               <input name="email" type="email" className="border border-neutral-700 bg-neutral-900 p-3 rounded" placeholder="Enter your email" />
+               <textarea name="message" className="border border-neutral-700 bg-neutral-900 p-3 rounded h-32" placeholder="Enter your message" />
+               <button type="submit" className="bg-red-500 text-white px-4 py-3 rounded hover:bg-red-600 mt-2 transition-colors">
+                 Send Message
+               </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

@@ -3,42 +3,62 @@ import projects from "../utils/ProjectData";
 
 const Projects = () => {
   return (
-    <div id="project" className="mt-40 flex-col flex  items-center">
-      <div className="mr-auto ml-36 ">
-        <h1 className="text-4xl font-bold">Projects</h1>
-      </div>
-      {projects.map((project) => (
-        <div className="w-3/4 h-96 bg-neutral-900 mt-10 flex items-center rounded-2xl hover:scale-[1.04] hover:transition-all">
-          <div className="flex gap-x-8 ">
-            <img
-              className="w-[400px] h-56 m-8 mt-10"
-              src={project.img}
-              alt="netfix"
-            />
-            <div>
-              <div className="flex gap-x-6">
-                {project.skills.map((skill) => (
-                  <button className="border-red-500 border rounded-lg p-1 px-2 ">
-                    {skill}
-                  </button>
-                ))}
+    <div id="project" className=" px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold">Projects</h1>
+        </div>
+
+        <div className="flex flex-col items-center gap-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="w-full bg-neutral-900 flex flex-col lg:flex-row items-center rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300"
+            >
+              <div className="w-full lg:w-1/2">
+                <img
+                  className="w-full h-64 object-cove p-5 " // object-cover ensures image fills space without distortion
+                  src={project.img}
+                  alt={project.title}
+                />
               </div>
 
-              <h1 className="mt-7 font-bold text-2xl">{project.title}</h1>
-              <p className="mt-5 text-gray-300 w-[90%]">{project.para}</p>
-              <button className="mt-10 border-red-500 border p-1 rounded-lg bg-red-500 px-3 hover:bg-red-400 hover:scale-110">
-                <a href={project.preview} target="_blank">
+              <div className="w-full lg:w-1/2 p-8">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.skills.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="border-red-500 border rounded-lg p-1 px-3 text-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                <h2 className="mb-4 font-bold text-2xl">{project.title}</h2>
+                <p className="mb-6 text-gray-300">{project.para}</p>
+                <a
+                  href={project.preview}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block border-red-500 border p-2 rounded-lg bg-red-500 px-4 hover:bg-red-600 hover:scale-105 transition-all"
+                >
                   Preview
                 </a>
-              </button>
+              </div>
             </div>
+          ))}
+          <div className="mt-8">
+            <a
+              href="https://github.com/khushi-gupta-tech?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-red-500 p-3 rounded-lg hover:bg-red-600 cursor-pointer hover:scale-105 transition-transform inline-block"
+            >
+              View More
+            </a>
           </div>
         </div>
-      ))}
-      <div className="mt-12">
-        <button className="bg-red-500 p-2 rounded-lg hover:bg-red-400 cursor-pointer hover:scale-110 ">
-          <a href="https://github.com/khushi-gupta-tech?tab=repositories" target="_blank">View More</a>
-        </button>
       </div>
     </div>
   );

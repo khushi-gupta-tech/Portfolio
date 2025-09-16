@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div className='bg-neutral-900 flex items-center mt-20 flex-col text-gray-300'>
-        <h1 className='mt-2'>© 2025 Khushi Gupta. Made with ❤️ and lots of love</h1>
-        <p className='text-sm m-1'>Crafting digital experiences that inspire and engage. Always learning, always building something new.</p>
-    </div>
-  )
-}
+    <footer className="bg-neutral-900 text-center py-1 px-4  text-gray-400">
+      <p className="mb-1">© 2025 Khushi Gupta. Made with ❤️</p>
+      <p className="text-sm">
+        Crafting digital experiences that inspire and engage.
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
