@@ -16,27 +16,27 @@ const Skills = () => {
           </a>
         </div>
 
-        <h2 className="  text-gray-400 mb-12">
+        <h2 className="text-gray-400 mb-12 hidden lg:block ">
         ⭕ Hover over each skill to see my proficiency level
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 mt-10 sm:mt-0">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex items-center gap-x-4 w-full sm:w-[500px] p-4 bg-neutral-900 rounded-lg shadow-md group hover:scale-[1.02] transition-transform"
+              className="flex items-center gap-x-4 w-full sm:w-[500px] p-4 bg-neutral-900 rounded-lg shadow-md group hover:scale-[1.02] transition-transform "
               style={{ "--skill-level-width": `${skill.level}%` }}
             >
               <skill.icon size={30} />
               <p className="font-semibold text-lg flex-1">{skill.name}</p>
 
               <div className="w-1/2 bg-neutral-700 rounded-full h-3 overflow-hidden">
-                <div className="bg-red-600 h-3 w-0 transition-all duration-700 ease-out group-hover:w-[var(--skill-level-width)]"></div>
+                <div className="bg-red-600 h-3  transition-all duration-700 ease-out w-[var(--skill-level-width)] md:w-0 group-hover:w-[var(--skill-level-width)]"></div>
               </div>
 
               <div className="w-12 text-center h-6">
-                <span className="group-hover:hidden font-bold">0%</span>
-                <span className="hidden group-hover:block font-bold">
+                <span className=" hidden group-hover:hidden lg:block font-bold">0%</span>
+                <span className="lg:hidden group-hover:block font-bold">
                   {skill.level}%
                 </span>
               </div>
