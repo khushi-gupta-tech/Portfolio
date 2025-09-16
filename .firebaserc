@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "portfolio-9242a"
-  }
+  },
+  "targets": {
+    "portfolio-9242a": {
+      "hosting": {
+        "khushigupta-react-site": [
+          "khushigupta-react-site"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
