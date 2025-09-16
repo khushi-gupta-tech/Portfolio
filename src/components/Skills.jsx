@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <div id="skill" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+        <div className="flex lg:flex-row sm:flex-row justify-between items-center gap-4 mb-4">
           <h1 className="text-4xl font-bold">Skills</h1>
           <a
             href="https://www.linkedin.com/in/khushi-gupta-437656235/details/skills/"
@@ -16,8 +16,8 @@ const Skills = () => {
           </a>
         </div>
 
-        <h2 className="text-center text-gray-400 mb-12">
-          Hover over each skill to see my proficiency level
+        <h2 className="  text-gray-400 mb-12">
+        ⭕ Hover over each skill to see my proficiency level
         </h2>
 
         <div className="flex flex-wrap justify-center gap-6">

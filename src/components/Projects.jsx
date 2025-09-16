@@ -3,7 +3,7 @@ import projects from "../utils/ProjectData";
 
 const Projects = () => {
   return (
-    <div id="project" className=" px-4 sm:px-6 lg:px-8">
+    <div id="project" className=" px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
           <h1 className="text-4xl font-bold">Projects</h1>

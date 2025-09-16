@@ -6,9 +6,9 @@ const MainPage = () => {
   return (
     <div
       id="main"
-      className="flex flex-col items-center justify-center min-h-screen py-15 "
+      className="flex flex-col items-center  min-h-screen py-15 mt-25 lg:mt-0"
     >
-      <div className="lg:mt-0 lg:w-1/2 flex justify-center ">
+      <div className="lg:mt-0  lg:w-1/2 flex justify-center ">
         <img
           className="w-48 md:w-64  rounded-full object-cover"
           src={photo}
@@ -16,7 +16,7 @@ const MainPage = () => {
         />
       </div>
 
-      <div className="text-center flex justify-center flex-col lg:w-1/2 mt-5 ">
+      <div className="text-center flex justify-center flex-col lg:w-1/2 mt-3 ">
         <h1 className="text-4xl md:text-6xl font-bold">
           Front-End <br /> React Developer
         </h1>
@@ -26,7 +26,7 @@ const MainPage = () => {
           and modern web applications.
         </p>
         <div>
-          <ul className="flex mt-4 gap-x-4 cursor-pointer justify-center ">
+          <ul className="flex mt-2 gap-x-4 cursor-pointer justify-center ">
             <li className="hover:text-gray-400 hover:scale-110 transition-transform">
               <a
                 href="https://github.com/khushi-gupta-tech"
